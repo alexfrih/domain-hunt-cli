@@ -551,8 +551,8 @@ const cfg = adsConfig();
 const adsReady = !!(cfg.clientId && cfg.clientSecret && cfg.refreshToken);
 // A country domain is measured where it sells: .fr in France, not worldwide, where the same word
 // can be something else (a game, a brand). Google Ads geo target ids.
-const GEO: Record<string, number> = { fr: 2250, de: 2276, uk: 2826, es: 2724, it: 2380, ch: 2756, be: 2056, ca: 2124, nl: 2528, pt: 2620 };
-const LANG: Record<string, number> = { fr: 1002, de: 1001, es: 1003, it: 1004, nl: 1010, pt: 1014 };
+const GEO: Record<string, number> = { fr: 2250, de: 2276, uk: 2826, es: 2724, it: 2380, ch: 2756, be: 2056, ca: 2124, nl: 2528, pt: 2620, th: 2764 };
+const LANG: Record<string, number> = { fr: 1002, de: 1001, es: 1003, it: 1004, nl: 1010, pt: 1014, th: 1044 };
 async function adsByGeo(keywords: string[], domains: string[], cfg: AdsConfig): Promise<Map<string, Ads>> {
   const groups = new Map<number | undefined, string[]>();
   keywords.forEach((k, i) => {
